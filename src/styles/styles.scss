@@ -1,0 +1,266 @@
+@import 'reset';
+@import 'fonts';
+
+// Fonts
+$default:'lorem',helvetica,sans-serif;
+
+// Colors
+$black:rgba(10,10,10,1);
+$lightBlack:rgba(40,40,40,1);
+$white:#fff;
+$yellow:#FDD663;
+$green:#34A853;
+$red:#FF431A;
+$lightGrey:rgba(235,235,235,1);
+$midGrey:rgba(180,180,180,1);
+$darkGrey:rgba(100,100,100,1);
+
+// Transitions
+$veryFastTransitionSpeed:.2s;
+$fastTransitionSpeed:.4s;
+$slowTransitionSpeed:1s;
+$verySlowTransitionSpeed:2s;
+
+// Global
+
+html, body {
+	overflow:auto;
+	-webkit-font-smoothing:antialiased;
+	font-family:$default;
+	font-size:16px;
+	line-height:24px;
+	background:$white;
+}
+
+.clearfix {
+	clear:both;
+}
+
+.relativeContainer {
+	width:100%;
+	height:100%;
+	position:relative;
+}
+
+// homepage
+
+#welcomeNotice {
+	display:inline-block;
+	position:fixed;
+	top:20px;
+	left:20px;
+	padding:16px;
+	padding-top:12px;
+	padding-bottom:12px;
+	border-radius:4px;
+	background:$yellow;
+	transition:opacity $veryFastTransitionSpeed;
+	z-index:10;
+}
+
+#welcomeNotice.closed {
+	opacity:0;
+	pointer-events:none;
+}
+
+.inlineLink {
+	padding-bottom:1px;
+	border-bottom:1px solid;
+}
+
+span.iconButton {
+	height:20px;
+	width:20px;
+	display:inline-block;
+	vertical-align:middle;
+	margin-left:10px;
+	padding:6px;
+	border-radius:16px;
+	background:rgba(255,255,255,0);
+	transition:background $veryFastTransitionSpeed;
+	cursor:pointer;
+}
+
+span.iconButton:hover {
+	background:rgba(0,0,0,.1);
+}
+
+span.iconButton img {
+	width:100%;
+	height:100%;
+}
+
+.inlineLink {
+	cursor:pointer;
+}
+
+// Control panel
+
+#controlPanel {
+	position:fixed;
+	bottom:0;
+	left:0;
+	right:0;
+	background:$lightBlack;
+	padding-left:24px;
+	padding-bottom:12px;
+	padding-top:12px;
+	padding-right:12px;
+	color:$white;
+}
+
+.siteTitle {
+	display:inline-block;
+	line-height:40px;
+}
+
+.floatRight {
+	float:right;
+}
+
+.iconAndLabelButton {
+	display:inline-block;
+	vertical-align:middle;
+	cursor:pointer;
+	padding:4px;
+	padding-left:10px;
+	padding-right:10px;
+	border-radius:2px;
+	transition:background $veryFastTransitionSpeed;
+}
+
+.iconAndLabelButton:hover {
+	background:rgba(255,255,255,.1);
+}
+
+.iconAndLabelButton img {
+	vertical-align:middle;
+	width:20px;
+	height:20px;
+}
+
+.iconAndLabelButton .buttonLabel {
+	line-height:32px;
+}
+
+#microphoneCircle {
+	content:'';
+	height:10px;
+	width:10px;
+	background:$darkGrey;
+	border-radius:5px;
+	display:inline-block;
+	vertical-align:middle;
+	margin-right:2px;
+	margin-top:-1px;
+}
+
+.iconAndLabelButton.microphoneOn #microphoneCircle {
+	background:$green;
+}
+
+// Canvas
+
+#canvas {
+	position:fixed;
+	top:0;
+	left:0;
+	right:0;
+	bottom:64px;
+	background:$black;
+	overflow-x:hidden;
+	overflow-y:hidden;
+}
+
+#projectContainer {
+	width:2250px;
+}
+
+#projectContainer.loaded {
+	transition:transform $fastTransitionSpeed;
+}
+
+.project {
+	width:450px;
+	height:450px;
+	float:left;
+	border:1px solid $darkGrey;
+	box-sizing:border-box;
+}
+
+// Project selector
+
+#selector {
+	position:fixed;
+	height:450px;
+	width:450px;
+	box-sizing:border-box;
+	z-index:2;
+	left:50%;
+	top:calc(50% - 32px);
+	transform:translateX(-50%) translateY(-50%);
+}
+
+.selectorElement {
+	position:absolute;
+	width:8px;
+	height:8px;
+	border-radius:4px;
+	background:$white;
+}
+
+.selectorElement:nth-child(1) { top:0; left:0; }
+.selectorElement:nth-child(2) { top:0; right:0; }
+.selectorElement:nth-child(3) { bottom:0; left:0; }
+.selectorElement:nth-child(4) { bottom:0; right:0; }
+
+// Directional labels
+
+.homepageDirectionalLabel {
+	background:$red;
+	z-index:10;
+	color:white;
+	position:fixed;
+	padding:10px;
+	padding-top:8px;
+	padding-bottom:8px;
+	border-radius:2px;
+	width:50px;
+	text-align:center;
+}
+
+.homepageDirectionalLabel img {
+	filter:invert(1);
+	width:18px;
+	display:inline-block;
+	vertical-align:middle;
+	margin-top:-2px;
+	margin-right:4px;
+	display:none;
+}
+
+#homepageDirectionalLabelUp {
+	left:50%;
+	transform:translateX(-50%);
+	top:10px;
+}
+
+#homepageDirectionalLabelDown {
+	left:50%;
+	transform:translateX(-50%);
+	bottom:74px;
+}
+
+#homepageDirectionalLabelLeft {
+	top:50%;
+	transform:translateY(-50%);
+	left:10px;
+}
+
+#homepageDirectionalLabelRight {
+	top:50%;
+	transform:translateY(-50%);
+	right:10px;
+}
+
+@import 'mobile';

@@ -1,0 +1,62 @@
+<!--
+Concept and design by Chuck Carlson and Gabe Ferreira
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Andrea Drasbart</title>
+	<meta name="viewport" content="width=device-width">
+	<meta name="description" content="Travel photography and beyond">
+	<link href="assets/main.css" rel="stylesheet" type="text/css" />
+	<link rel="shortcut icon" href="assets/img/favicon.ico">
+
+</head>
+
+<body class="loading">
+
+	<div id="welcomeNotice">
+		This website can be controled with your voice.
+		<span class="inlineLink" id="microphoneTextButton">Turn on the microphone</span>
+		<span class="iconButton" id="welcomeNoticeCloseButton"><img src="assets/img/ui/close.svg"></span><!--iconButton-->
+	</div><!--welcomeNotice-->
+
+	<div id="controlPanel">
+		<span class="siteTitle">Andrea Drasbart</span>
+		<div class="floatRight">
+			<div class="iconAndLabelButton microphoneOff" id="controlPanelMicrophoneButton">
+				<!--<img src="assets/img/ui/microphone.svg">-->
+				<span id="microphoneCircle"></span>
+				<span class="buttonLabel" id="controlPanelMicrophoneButtonLabel">Microphone is off</span>
+			</div>
+		</div><!--floatRight-->
+	</div><!--controlPanel-->
+
+	<div id="selector">
+		<div class="relativeContainer">
+			<div class="selectorElement"></div><!--selectorElement-->
+			<div class="selectorElement"></div><!--selectorElement-->
+			<div class="selectorElement"></div><!--selectorElement-->
+			<div class="selectorElement"></div><!--selectorElement-->
+		</div><!--relativeContainer-->
+	</div><!--selector-->
+
+	<div id="canvas">
+		<div id="projectContainer">
+		</div><!--projectContainer-->
+	</div><!--canvas-->
+
+	<div id="homepageDirectionalLabels">
+		<div id="homepageDirectionalLabelUp" class="homepageDirectionalLabel"><img src="assets/img/ui/ear.svg">“Up”</div><!--up-->
+		<div id="homepageDirectionalLabelRight" class="homepageDirectionalLabel"><img src="assets/img/ui/ear.svg">“Right”</div><!--up-->
+		<div id="homepageDirectionalLabelDown" class="homepageDirectionalLabel"><img src="assets/img/ui/ear.svg">“Down”</div><!--up-->
+		<div id="homepageDirectionalLabelLeft" class="homepageDirectionalLabel"><img src="assets/img/ui/ear.svg">“Left”</div><!--up-->
+	</div><!--homepageDirectionalLabels-->
+
+	<script async src="assets/app.js"></script>
+
+</body>
+
+</html>
