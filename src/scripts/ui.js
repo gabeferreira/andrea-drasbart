@@ -48,7 +48,7 @@ function populateProjects() {
 		// Load the project thumbnail
 		var projectThumbnail = document.createElement('img');
 			projectThumbnail.className = 'projectThumbnail';
-			projectThumbnail.src = 'assets/img/thumbnails/' + projects[i].thumbnail;
+			projectThumbnail.src = 'assets/img/thumbnails/' + projects[i].id + '.jpg';
 
 			project.appendChild(projectTitle);
 			project.appendChild(projectThumbnail);
