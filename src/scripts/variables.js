@@ -19,8 +19,23 @@ var welcomeNotice = document.getElementById('welcomeNotice');
 var controlPanelMicrophoneButton = document.getElementById('controlPanelMicrophoneButton');
 var controlPanelMicrophoneButtonLabel = document.getElementById('controlPanelMicrophoneButtonLabel');
 var controlPanelMicrophoneLink = document.getElementById('controlPanelMicrophoneLink');
+var controlPanelInfoButton = document.getElementById('controlPanelInfoButton');
+var closeInformation = document.getElementById('closeInformation');
 
 
 // Project population
 
 var projectContainer = document.getElementById('projectContainer');
+
+
+// Navigational controls
+
+var selector = document.getElementById('selector');
+
+var currentTranslationY;
+var currentTranslationX;
+
+var homepageDirectionalLabelUp = document.getElementById('homepageDirectionalLabelUp');
+var homepageDirectionalLabelDown = document.getElementById('homepageDirectionalLabelDown');
+var homepageDirectionalLabelLeft = document.getElementById('homepageDirectionalLabelLeft');
+var homepageDirectionalLabelRight = document.getElementById('homepageDirectionalLabelRight');

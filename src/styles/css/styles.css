@@ -47,7 +47,14 @@ html, body {
   font-family: "lorem", helvetica, sans-serif;
   font-size: 16px;
   line-height: 24px;
-  background: #fff; }
+  background: #0a0a0a;
+  overscroll-behavior-x: none;
+  overscroll-behavior-y: none; }
+
+body {
+  position: fixed;
+  width: 100%;
+  height: 100%; }
 
 .clearfix {
   clear: both; }
@@ -57,15 +64,19 @@ html, body {
   height: 100%;
   position: relative; }
 
+a {
+  color: inherit;
+  text-decoration: none; }
+
 #welcomeNotice {
   display: inline-block;
   position: fixed;
-  top: 20px;
-  left: 20px;
+  top: 15px;
+  left: 15px;
   padding: 16px;
   padding-top: 12px;
   padding-bottom: 12px;
-  border-radius: 4px;
+  border-radius: 2px;
   background: #FDD663;
   transition: opacity 0.2s;
   z-index: 10; }
@@ -102,19 +113,21 @@ span.iconButton img {
 
 #controlPanel {
   position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  bottom: 15px;
+  left: 15px;
   background: #282828;
   padding-left: 24px;
   padding-bottom: 12px;
   padding-top: 12px;
   padding-right: 12px;
-  color: #fff; }
+  color: #fff;
+  width: 400px;
+  z-index: 30;
+  border-radius: 2px;
+  transition: bottom 0.2s; }
 
-.siteTitle {
-  display: inline-block;
-  line-height: 40px; }
+#controlPanelInfoButton {
+  margin-left: 10px; }
 
 .floatRight {
   float: right; }
@@ -140,6 +153,11 @@ span.iconButton img {
 .iconAndLabelButton .buttonLabel {
   line-height: 32px; }
 
+#siteTitle {
+  line-height: 32px;
+  display: inline-block;
+  vertical-align: middle; }
+
 #microphoneCircle {
   content: '';
   height: 10px;
@@ -159,13 +177,16 @@ span.iconButton img {
   top: 0;
   left: 0;
   right: 0;
-  bottom: 64px;
+  bottom: 0;
   background: #0a0a0a;
   overflow-x: hidden;
-  overflow-y: hidden; }
+  overflow-y: hidden;
+  transition: transform 0.2s; }
 
 #projectContainer {
-  width: 2250px; }
+  width: 2250px;
+  border-left: 1px solid #646464;
+  border-top: 1px solid #646464; }
 
 #projectContainer.loaded {
   transition: transform 0.4s; }
@@ -174,8 +195,23 @@ span.iconButton img {
   width: 450px;
   height: 450px;
   float: left;
-  border: 1px solid #646464;
-  box-sizing: border-box; }
+  border-right: 1px solid #646464;
+  border-bottom: 1px solid #646464;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative; }
+
+.projectThumbnail {
+  max-width: calc(100% - 80px);
+  max-height: calc(100% - 110px); }
+
+.projectTitle {
+  color: #fff;
+  position: absolute;
+  top: 15px;
+  text-align: center; }
 
 #selector {
   position: fixed;
@@ -184,8 +220,9 @@ span.iconButton img {
   box-sizing: border-box;
   z-index: 2;
   left: 50%;
-  top: calc(50% - 32px);
-  transform: translateX(-50%) translateY(-50%); }
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  pointer-events: none; }
 
 .selectorElement {
   position: absolute;
@@ -195,23 +232,23 @@ span.iconButton img {
   background: #fff; }
 
 .selectorElement:nth-child(1) {
-  top: 0;
-  left: 0; }
+  top: -4px;
+  left: -4px; }
 
 .selectorElement:nth-child(2) {
-  top: 0;
-  right: 0; }
+  top: -4px;
+  right: -4px; }
 
 .selectorElement:nth-child(3) {
-  bottom: 0;
-  left: 0; }
+  bottom: -4px;
+  left: -4px; }
 
 .selectorElement:nth-child(4) {
-  bottom: 0;
-  right: 0; }
+  bottom: -4px;
+  right: -4px; }
 
 .homepageDirectionalLabel {
-  background: #FF431A;
+  background: #ED2935;
   z-index: 10;
   color: white;
   position: fixed;
@@ -220,7 +257,8 @@ span.iconButton img {
   padding-bottom: 8px;
   border-radius: 2px;
   width: 50px;
-  text-align: center; }
+  text-align: center;
+  cursor: pointer; }
 
 .homepageDirectionalLabel img {
   filter: invert(1);
@@ -234,19 +272,50 @@ span.iconButton img {
 #homepageDirectionalLabelUp {
   left: 50%;
   transform: translateX(-50%);
-  top: 10px; }
+  top: 15px; }
 
 #homepageDirectionalLabelDown {
   left: 50%;
   transform: translateX(-50%);
-  bottom: 74px; }
+  bottom: 15px; }
 
 #homepageDirectionalLabelLeft {
   top: 50%;
   transform: translateY(-50%);
-  left: 10px; }
+  left: 15px; }
 
 #homepageDirectionalLabelRight {
   top: 50%;
   transform: translateY(-50%);
-  right: 10px; }
+  right: 15px; }
+
+#projectViewCTA {
+  position: fixed;
+  width: 70px;
+  text-align: center;
+  color: #FDD663;
+  padding: 5px;
+  cursor: pointer;
+  left: 50%;
+  transform: translateX(-50%) translateY(calc(-50% + 228px));
+  top: calc(50% - 32px); }
+
+#information {
+  position: fixed;
+  line-height: 40px;
+  left: 15px;
+  bottom: -64px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 24px;
+  padding-right: 16px;
+  border-radius: 2px;
+  background: #7AA8F5;
+  transition: bottom 0.2s;
+  z-index: 10; }
+
+body.showingInfo #controlPanel {
+  bottom: 94px; }
+
+body.showingInfo #information {
+  bottom: 15px; }

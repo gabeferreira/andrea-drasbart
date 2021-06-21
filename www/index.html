@@ -18,13 +18,20 @@ Concept and design by Chuck Carlson and Gabe Ferreira
 <body class="loading">
 
 	<div id="welcomeNotice">
-		This website can be controled with your voice.
-		<span class="inlineLink" id="microphoneTextButton">Turn on the microphone</span>
+		<span class="inlineLink" id="microphoneTextButton">Turn on the microphone</span> to control this site with your voice.
 		<span class="iconButton" id="welcomeNoticeCloseButton"><img src="assets/img/ui/close.svg"></span><!--iconButton-->
 	</div><!--welcomeNotice-->
 
 	<div id="controlPanel">
-		<span class="siteTitle">Andrea Drasbart</span>
+
+		<div id="siteTitle">
+			Andrea Drasbart
+		</div>
+
+		<div id="controlPanelInfoButton" class="iconAndLabelButton">
+			<span class="buttonLabel">“Info”</span>
+		</div><!--controlPanelInfoButton-->
+
 		<div class="floatRight">
 			<div class="iconAndLabelButton microphoneOff" id="controlPanelMicrophoneButton">
 				<!--<img src="assets/img/ui/microphone.svg">-->
@@ -32,6 +39,7 @@ Concept and design by Chuck Carlson and Gabe Ferreira
 				<span class="buttonLabel" id="controlPanelMicrophoneButtonLabel">Microphone is off</span>
 			</div>
 		</div><!--floatRight-->
+
 	</div><!--controlPanel-->
 
 	<div id="selector">
@@ -48,12 +56,18 @@ Concept and design by Chuck Carlson and Gabe Ferreira
 		</div><!--projectContainer-->
 	</div><!--canvas-->
 
+	<div id="projectViewCTA">“View”</div><!--projectGoCTA-->
+
 	<div id="homepageDirectionalLabels">
 		<div id="homepageDirectionalLabelUp" class="homepageDirectionalLabel"><img src="assets/img/ui/ear.svg">“Up”</div><!--up-->
 		<div id="homepageDirectionalLabelRight" class="homepageDirectionalLabel"><img src="assets/img/ui/ear.svg">“Right”</div><!--up-->
 		<div id="homepageDirectionalLabelDown" class="homepageDirectionalLabel"><img src="assets/img/ui/ear.svg">“Down”</div><!--up-->
 		<div id="homepageDirectionalLabelLeft" class="homepageDirectionalLabel"><img src="assets/img/ui/ear.svg">“Left”</div><!--up-->
 	</div><!--homepageDirectionalLabels-->
+
+	<div id="information">
+		No voice data is recorded and nothing leaves the browser. “<a class="inlineLink" href="https://www.instagram.com/andreadrasbart/" target="_blank">Contact</a>” Andrea Drasbart. See the “code” on <a href="https://github.com/gabeferreira/andrea-drasbart" class="inlineLink" target="_blank">Github</a>. <div class="iconAndLabelButton" id="closeInformation"><span class="buttonLabel">“Close”</span></div>
+	</div><!--information-->
 
 	<script async src="assets/app.js"></script>
 

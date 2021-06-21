@@ -3,112 +3,112 @@
 var projects = [
 	{
 		title:'Hawaii',
-		thumbnail:'lorem',
+		thumbnail:'placeholder-01.jpg',
 		date:'April 2021'
 	},
 	{
 		title:'Bairrada',
-		thumbnail:'lorem',
+		thumbnail:'placeholder-02.jpg',
 		date:'December 2020'
 	},
 	{
 		title:'Hong Kong',
-		thumbnail:'lorem',
+		thumbnail:'placeholder-01.jpg',
 		date:'January 2020'
 	},
 	{
 		title:'Seattle',
-		thumbnail:'lorem',
+		thumbnail:'placeholder-01.jpg',
 		date:'October 2020'
 	},
 	{
 		title:'San Francisco',
-		thumbnail:'lorem',
+		thumbnail:'placeholder-02.jpg',
 		date:'Ongoing',
 	},
 	{
 		title:'Guatemala',
-		thumbnail:'lorem',
+		thumbnail:'placeholder-01.jpg',
 		date:'December 2019',
 	},
 	{
 		title:'Barcelona',
-		thumbnail:'lorem',
+		thumbnail:'placeholder-02.jpg',
 		date:'September 2019',
 	},
 	{
 		title:'Amsterdam',
-		thumbnail:'lorem',
+		thumbnail:'placeholder-01.jpg',
 		date:'September 2019',
 	},
 	{
 		title:'Orange County',
-		thumbnail:'lorem',
+		thumbnail:'placeholder-01.jpg',
 		date:'November 2019',
 	},
 	{
 		title:'Lamma Island',
-		thumbnail:'lorem',
+		thumbnail:'placeholder-02.jpg',
 		date:'January 2020',
 	},
 	{
 		title:'Lake Tahoe',
-		thumbnail:'lorem',
+		thumbnail:'placeholder-01.jpg',
 		date:'November 2021',
 	},
 	{
 		title:'Llafranc',
-		thumbnail:'lorem',
+		thumbnail:'placeholder-02.jpg',
 		date:'September 2019',
 	},
 	{
 		title:'San Francisco Bay Area',
-		thumbnail:'lorem',
+		thumbnail:'placeholder-01.jpg',
 		date:'Ongoing',
 	},
 	{
 		title:'The Hague',
-		thumbnail:'lorem',
+		thumbnail:'placeholder-01.jpg',
 		date:'September 2019',
 	},
 	{
 		title:'Sebastopol',
-		thumbnail:'lorem',
+		thumbnail:'placeholder-02.jpg',
 		date:'August 2019',
 	},
 	{
 		title:'Phoenix',
-		thumbnail:'lorem',
+		thumbnail:'placeholder-01.jpg',
 		date:'August 2020',
 	},
 	{
 		title:'Butte County',
-		thumbnail:'lorem',
+		thumbnail:'placeholder-02.jpg',
 		date:'August 2020',
 	},
 	{
 		title:'Sailing Day',
-		thumbnail:'lorem',
+		thumbnail:'placeholder-01.jpg',
 		date:'November 2020',
 	},
 	{
 		title:'Mendocino',
-		thumbnail:'lorem',
+		thumbnail:'placeholder-01.jpg',
 		date:'July 2019',
 	},
 	{
 		title:'San Diego',
-		thumbnail:'lorem',
+		thumbnail:'placeholder-02.jpg',
 		date:'February 2021',
 	},
 	{
 		title:'Kauai',
-		thumbnail:'lorem',
+		thumbnail:'placeholder-01.jpg',
 		date:'March 2021',
 	},
 	{
 		title:'Mono County',
-		thumbnail:'lorem',
+		thumbnail:'placeholder-01.jpg',
 		date:'July 2020',
 	},
 ]
