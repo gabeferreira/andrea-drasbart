@@ -41,10 +41,17 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+@font-face {
+  font-family: 'Haas Grot Text Web';
+  src: url("fonts/nhg/NeueHaasGrotText-55Roman-Web.woff2") format("woff2"), url("fonts/nhg/NeueHaasGrotText-55Roman-Web.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal; }
+
 html, body {
   overflow: auto;
   -webkit-font-smoothing: antialiased;
-  font-family: "lorem", helvetica, sans-serif;
+  font-family: "Haas Grot Text Web", helvetica, sans-serif;
   font-size: 16px;
   line-height: 24px;
   background: #0a0a0a;
@@ -74,7 +81,7 @@ a {
   top: 15px;
   left: 15px;
   padding: 16px;
-  padding-top: 12px;
+  padding-top: 11px;
   padding-bottom: 12px;
   border-radius: 2px;
   background: #FDD663;
@@ -118,7 +125,7 @@ span.iconButton img {
   background: #282828;
   padding-left: 24px;
   padding-bottom: 12px;
-  padding-top: 12px;
+  padding-top: 11px;
   padding-right: 12px;
   color: #fff;
   width: 400px;
@@ -167,7 +174,7 @@ span.iconButton img {
   display: inline-block;
   vertical-align: middle;
   margin-right: 2px;
-  margin-top: -1px; }
+  margin-top: -3px; }
 
 .iconAndLabelButton.microphoneOn #microphoneCircle {
   background: #34A853; }
@@ -302,10 +309,10 @@ span.iconButton img {
 
 #information {
   position: fixed;
-  line-height: 40px;
+  line-height: 32px;
   left: 15px;
-  bottom: -64px;
-  padding-top: 12px;
+  bottom: -65px;
+  padding-top: 11px;
   padding-bottom: 12px;
   padding-left: 24px;
   padding-right: 16px;
@@ -313,6 +320,10 @@ span.iconButton img {
   background: #7AA8F5;
   transition: bottom 0.2s;
   z-index: 10; }
+
+#informationText {
+  display: inline-block;
+  vertical-align: middle; }
 
 body.showingInfo #controlPanel {
   bottom: 94px; }

@@ -18,7 +18,6 @@ controlPanelInfoButton.addEventListener('click', function(){
 });
 
 function toggleInfo() {
-	console.log('toggling');
 	body.classList.toggle('showingInfo');
 }
 
