@@ -13,6 +13,10 @@ var gulp = require('gulp'),
 	plumber = require("gulp-plumber");
 
 var jsSources = [
+	// Lib
+	'src/scripts/lib/signals.min.js',
+	'src/scripts/lib/crossroads.min.js',
+	'src/scripts/lib/hasher.min.js',
 	// Functions
 	'src/scripts/db.js',
 	'src/scripts/variables.js',
@@ -20,6 +24,10 @@ var jsSources = [
 	'src/scripts/console.js',
 	'src/scripts/ui.js',
 	'src/scripts/listener.js',
+	// Routing
+	'src/scripts/routes.js',
+	'src/scripts/launcher.js',
+	'src/scripts/page-loader.js',
 ]
 
 gulp.task('html', function(done) {

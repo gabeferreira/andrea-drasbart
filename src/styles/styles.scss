@@ -15,6 +15,7 @@ $blue:#7AA8F5;
 $lightGrey:rgba(235,235,235,1);
 $midGrey:rgba(180,180,180,1);
 $darkGrey:rgba(100,100,100,1);
+$veryDarkGrey:rgba(70,70,70,1);
 
 // Transitions
 $veryFastTransitionSpeed:.2s;
@@ -56,17 +57,40 @@ a {
 	text-decoration:none;
 }
 
+// Pill
+
+.pill {
+	height:62px;
+	box-sizing:border-box;
+	border-radius:2px;
+	padding-left:18px;
+	padding-right:10px;
+	padding-bottom:10px;
+	padding-top:10px;
+}
+
+.pillContainer {
+
+}
+
 // homepage
+
+#loadingMessage {
+	position:fixed;
+	top:50%;
+	left:50%;
+	text-align:center;
+	transform:translateX(-50%) translateY(-50%);
+	z-index:20;
+	color:$white;
+	transition:opacity $fastTransitionSpeed;
+}
 
 #welcomeNotice {
 	display:inline-block;
 	position:fixed;
 	top:15px;
 	left:15px;
-	padding:16px;
-	padding-top:11px;
-	padding-bottom:12px;
-	border-radius:2px;
 	background:$yellow;
 	transition:opacity $veryFastTransitionSpeed;
 	z-index:10;
@@ -77,22 +101,29 @@ a {
 	pointer-events:none;
 }
 
+#welcomeNoticeText {
+	display:inline-block;
+	vertical-align:top;
+	margin-top:8px;
+}
+
 .inlineLink {
 	padding-bottom:1px;
 	border-bottom:1px solid;
+	cursor:pointer;
 }
 
 span.iconButton {
-	height:20px;
-	width:20px;
-	display:inline-block;
-	vertical-align:middle;
+	height:42px;
+	width:42px;
 	margin-left:10px;
-	padding:6px;
-	border-radius:16px;
+	padding:10px;
+	border-radius:21px;
 	background:rgba(255,255,255,0);
 	transition:background $veryFastTransitionSpeed;
 	cursor:pointer;
+	box-sizing:border-box;
+	display:inline-block;
 }
 
 span.iconButton:hover {
@@ -104,10 +135,6 @@ span.iconButton img {
 	height:100%;
 }
 
-.inlineLink {
-	cursor:pointer;
-}
-
 // Control panel
 
 #controlPanel {
@@ -115,14 +142,9 @@ span.iconButton img {
 	bottom:15px;
 	left:15px;
 	background:$lightBlack;
-	padding-left:24px;
-	padding-bottom:12px;
-	padding-top:11px;
-	padding-right:12px;
 	color:$white;
 	width:400px;
 	z-index:30;
-	border-radius:2px;
 	transition:bottom $veryFastTransitionSpeed;
 }
 
@@ -136,12 +158,14 @@ span.iconButton img {
 
 .iconAndLabelButton {
 	display:inline-block;
-	vertical-align:middle;
 	cursor:pointer;
-	padding:4px;
+	height:42px;
+	box-sizing:border-box;
+	padding-top:8px;
+	padding-bottom:10px;
 	padding-left:10px;
 	padding-right:10px;
-	border-radius:2px;
+	border-radius:1px;
 	transition:background $veryFastTransitionSpeed;
 }
 
@@ -155,14 +179,8 @@ span.iconButton img {
 	height:20px;
 }
 
-.iconAndLabelButton .buttonLabel {
-	line-height:32px;
-}
-
 #siteTitle {
-	line-height:32px;
 	display:inline-block;
-	vertical-align:middle;
 }
 
 #microphoneCircle {
@@ -192,17 +210,57 @@ span.iconButton img {
 	background:$black;
 	overflow-x:hidden;
 	overflow-y:hidden;
-	transition:transform $veryFastTransitionSpeed;
+	transition:transform $fastTransitionSpeed, opacity $fastTransitionSpeed;
+}
+
+#canvas.cannotMoveUp {
+	animation:cannotMoveUp $fastTransitionSpeed;
+}
+
+#canvas.cannotMoveDown {
+	animation:cannotMoveDown $fastTransitionSpeed;
+}
+
+#canvas.cannotMoveLeft {
+	animation:cannotMoveLeft $fastTransitionSpeed;
+}
+
+#canvas.cannotMoveRight {
+	animation:cannotMoveRight $fastTransitionSpeed;
+}
+
+@keyframes cannotMoveUp {
+	0%		{ transform:translateY(0);		}
+	50%		{ transform:translateY(20px);	}
+	100%	{ transform:translateY(0);		}
+}
+
+@keyframes cannotMoveDown {
+	0%		{ transform:translateY(0);		}
+	50%		{ transform:translateY(-20px);	}
+	100%	{ transform:translateY(0);		}
+}
+
+@keyframes cannotMoveLeft {
+	0%		{ transform:translateX(0);		}
+	50%		{ transform:translateX(20px);	}
+	100%	{ transform:translateX(0);		}
+}
+
+@keyframes cannotMoveRight {
+	0%		{ transform:translateX(0);		}
+	50%		{ transform:translateX(-20px);	}
+	100%	{ transform:translateX(0);		}
 }
 
 #projectContainer {
 	width:2250px;
-	border-left:1px solid $darkGrey;
-	border-top:1px solid $darkGrey;
+	border-left:1px solid $veryDarkGrey;
+	border-top:1px solid $veryDarkGrey;
 }
 
 #projectContainer.loaded {
-	transition:transform $fastTransitionSpeed;
+	transition:transform $fastTransitionSpeed, opacity $fastTransitionSpeed;
 }
 
 // Projects
@@ -211,25 +269,50 @@ span.iconButton img {
 	width:450px;
 	height:450px;
 	float:left;
-	border-right:1px solid $darkGrey;
-	border-bottom:1px solid $darkGrey;
+	border-right:1px solid $veryDarkGrey;
+	border-bottom:1px solid $veryDarkGrey;
 	box-sizing:border-box;
+	position:relative;
+	text-align:center;
 	display:flex;
 	align-items:center;
 	justify-content:center;
-	position:relative;
+}
+
+.projectThumbnailLink {
+	width:calc(100% - 80px);
+	height:calc(100% - 110px);
+	opacity:0;
+	transition:opacity $fastTransitionSpeed;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+}
+
+.projectThumbnailLink:hover {
+	cursor:pointer;
 }
 
 .projectThumbnail {
-	max-width:calc(100% - 80px);
-	max-height:calc(100% - 110px);
+	height:auto;
+	width:auto;		
+	max-height:100%;
+	max-width:100%;	
 }
 
 .projectTitle {
-	color:$white;
+	transition:opacity $fastTransitionSpeed;
+	opacity:0;
 	position:absolute;
 	top:15px;
 	text-align:center;
+	color:$white;
+}
+
+.projectTitle:hover {
+	padding-bottom:1px;
+	cursor:pointer;
+	border-bottom:1px solid;
 }
 
 // Project selector
@@ -267,12 +350,13 @@ span.iconButton img {
 	color:white;
 	position:fixed;
 	padding:10px;
-	padding-top:8px;
-	padding-bottom:8px;
+	padding-top:7px;
+	padding-bottom:9px;
 	border-radius:2px;
-	width:50px;
+	width:60px;
 	text-align:center;
 	cursor:pointer;
+	transition:opacity $fastTransitionSpeed, transform $fastTransitionSpeed;
 }
 
 .homepageDirectionalLabel img {
@@ -321,28 +405,70 @@ span.iconButton img {
 	left:50%;
 	transform:translateX(-50%) translateY(calc(-50% + 228px));
 	top:calc(50% - 32px);
+	opacity:0;
+	transition:opacity $fastTransitionSpeed;
+	transition-delay:$slowTransitionSpeed;
+}
+
+// Loaded body
+
+body.loaded {
+
+	#projectViewCTA {
+		opacity:1;
+	}
+
+	.projectTitle {
+		opacity:1;
+	}
+
+	.projectThumbnailLink {
+		opacity:1;
+	}
+
+	#loadingMessage {
+		opacity:0;
+		pointer-events:none;
+	}
+
+}
+
+// Showing projects
+
+body.showingProject {
+
+	.homepageDirectionalLabel {
+	}
+
+	#canvas {
+		opacity:0;
+		transform:scale(1.25);
+	}
+
+	#homepageDirectionalLabelUp		{	transform:translateX(-50%) translateY(-60px);	}
+	#homepageDirectionalLabelDown	{	transform:translateX(-50%) translateY(60px);	}
+	#homepageDirectionalLabelLeft	{	transform:translateX(-100px) translateY(-50%);	}
+	#homepageDirectionalLabelRight	{	transform:translateX(100px) translateY(-50%);	}
+
 }
 
 // Information panel
 
 #information {
 	position:fixed;
-	line-height:32px;
 	left:15px;
 	bottom:-65px;
-	padding-top:11px;
-	padding-bottom:12px;
-	padding-left:24px;
-	padding-right:16px;
-	border-radius:2px;
 	background:$blue;
 	transition:bottom $veryFastTransitionSpeed;
 	z-index:10;
 }
 
 #informationText {
-	display:inline-block;
-	vertical-align:middle;
+	display:inline;
+}
+
+#closeInformation {
+	margin-left:20px;
 }
 
 body.showingInfo {

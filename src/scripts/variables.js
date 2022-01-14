@@ -25,6 +25,7 @@ var closeInformation = document.getElementById('closeInformation');
 
 // Project population
 
+var canvas = document.getElementById('canvas');
 var projectContainer = document.getElementById('projectContainer');
 
 

@@ -27,24 +27,14 @@ var projects = [
 		id:'orange-county-september-2019'
 	},
 	{
-		title:'Sebastopol',
-		date:'September 2019',
-		id:'sebastopol-august-2019'
-	},
-	{
-		title:'Tomales Bay',
-		date:'September 2019',
-		id:'tomales-bay-september-2019'
-	},
-	{
 		title:'Sea Ranch',
 		date:'October 2019',
 		id:'sea-ranch-october-2019'
 	},
 	{
-		title:'Greenwich',
-		date:'November 2019',
-		id:'greenwich-november-2019'
+		title:'Tomales Bay',
+		date:'September 2019',
+		id:'tomales-bay-september-2019'
 	},
 	{
 		title:'Guatemala',
@@ -62,19 +52,9 @@ var projects = [
 		id:'hong-kong-january-2020'
 	},
 	{
-		title:'Philippines',
-		date:'January 2020',
-		id:'philippines-january-2020'
-	},
-	{
-		title:'Napa Valley',
-		date:'February 2020',
-		id:'napa-valley-february-2020'
-	},
-	{
-		title:'Mono County',
-		date:'July 2020',
-		id:'mono-county-july-2020'
+		title:'Seattle',
+		date:'September 2020',
+		id:'seattle-september-2020'
 	},
 	{
 		title:'Covid Road Trip',
@@ -82,34 +62,14 @@ var projects = [
 		id:'covid-road-trip-summer-2020'
 	},
 	{
-		title:'Seattle',
-		date:'September 2020',
-		id:'seattle-september-2020'
-	},
-	{
-		title:'Portugal',
-		date:'December 2020',
-		id:'portugal-december-2020'
-	},
-	{
-		title:'Sailing',
-		date:'2020',
-		id:'sailing-2020'
-	},
-	{
 		title:'San Francisco (2021)',
 		date:'2021',
 		id:'san-francisco-2021'
 	},
 	{
-		title:'Sailing',
-		date:'2020',
-		id:'sailing-2020'
-	},
-	{
-		title:'Del Mar',
-		date:'March 2021',
-		id:'del-mar-march-2021'
+		title:'Portugal',
+		date:'December 2020',
+		id:'portugal-december-2020'
 	},
 	{
 		title:'Kauai',

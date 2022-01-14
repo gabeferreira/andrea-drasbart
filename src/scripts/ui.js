@@ -10,7 +10,6 @@ microphoneTextButton.addEventListener('click', function(){
 	welcomeNotice.classList.add('closed');
 });
 
-
 // Info section
 
 controlPanelInfoButton.addEventListener('click', function(){
@@ -29,63 +28,13 @@ function hideInfo() {
 	body.classList.remove('showingInfo');
 }
 
+// Body loading
 
-// Populate projects
+setTimeout(function(){
 
-function populateProjects() {
+	body.classList.add('loaded');
 
-	for (var i = 0; i < projects.length; i++) {
-
-		// Create a container
-		var project = document.createElement('div');
-			project.className = 'project';
-
-		// Display the project title
-		var projectTitle = document.createElement('div');
-			projectTitle.className = 'projectTitle';
-			projectTitle.textContent = projects[i].title;
-
-		// Load the project thumbnail
-		var projectThumbnail = document.createElement('img');
-			projectThumbnail.className = 'projectThumbnail';
-			projectThumbnail.src = 'assets/img/thumbnails/' + projects[i].id + '.jpg';
-
-			project.appendChild(projectTitle);
-			project.appendChild(projectThumbnail);
-
-		// Append to the project container
-		projectContainer.appendChild(project);
-
-	}
-
-	var clearfix = document.createElement('div');
-		clearfix.className = 'clearfix';
-
-	projectContainer.appendChild(clearfix);
-
-}
-
-populateProjects();
-
-
-// Determine the X and Y translations
-
-function determineInitialTranslations() {
-
-	var initialTranslationY = - (projectContainer.offsetHeight - windowHeight) / 2;
-	var initialTranslationX = - (projectContainer.offsetWidth - windowWidth) / 2;
-
-	currentTranslationX = initialTranslationX;
-	currentTranslationY = initialTranslationY;
-
-	projectContainer.style.transform = 'translateX(' + initialTranslationX + 'px) translateY(' + initialTranslationY + 'px)';
-	setTimeout(function(){
-		projectContainer.classList.add('loaded');
-	}, 50);
-
-}
-
-determineInitialTranslations()
+}, 1500);
 
 
 // Homepage scrolling functions
@@ -94,6 +43,25 @@ homepageDirectionalLabelUp.addEventListener('click', homepageMoveUp);
 homepageDirectionalLabelRight.addEventListener('click', homepageMoveRight);
 homepageDirectionalLabelDown.addEventListener('click', homepageMoveDown);
 homepageDirectionalLabelLeft.addEventListener('click', homepageMoveLeft);
+
+document.addEventListener('keydown', function(e){
+
+	if (e.code === 'ArrowUp') {
+		homepageMoveUp();
+	} else if (e.code === 'ArrowDown') {
+		homepageMoveDown();
+	} else if (e.code === 'ArrowLeft') {
+		homepageMoveLeft();
+	} else if (e.code === 'ArrowRight') {
+		homepageMoveRight();
+	}
+
+	if (e.keyCode === '38') { homepageMoveUp(); } 
+	else if (e.keyCode === '40') { homepageMoveDown() }
+	else if (e.keyCode === '37') { homepageMoveLeft() }
+	else if (e.keyCode === '39') { homepageMoveRight() }
+
+});
 
 function homepageMoveUp() {
 
@@ -104,7 +72,10 @@ function homepageMoveUp() {
 		currentTranslationY = currentTranslationY + 450;
 		projectContainer.style.transform = 'translateX(' + currentTranslationX + 'px) translateY(' + currentTranslationY + 'px)';
 	} else {
-		return;
+		canvas.classList.add('cannotMoveUp');
+		setTimeout(function(){
+			canvas.classList.remove('cannotMoveUp');
+		}, 500);
 	}
 
 }
@@ -120,7 +91,10 @@ function homepageMoveRight() {
 		projectContainer.style.transform = 'translateX(' + currentTranslationX + 'px) translateY(' + currentTranslationY + 'px)';
 
 	} else {
-		return;
+		canvas.classList.add('cannotMoveRight');
+		setTimeout(function(){
+			canvas.classList.remove('cannotMoveRight');
+		}, 500);
 	}
 
 }
@@ -136,7 +110,10 @@ function homepageMoveDown() {
 		projectContainer.style.transform = 'translateX(' + currentTranslationX + 'px) translateY(' + currentTranslationY + 'px)';
 
 	} else {
-		return;
+		canvas.classList.add('cannotMoveDown');
+		setTimeout(function(){
+			canvas.classList.remove('cannotMoveDown');
+		}, 500);
 	}
 
 }
@@ -152,7 +129,33 @@ function homepageMoveLeft() {
 		projectContainer.style.transform = 'translateX(' + currentTranslationX + 'px) translateY(' + currentTranslationY + 'px)';
 
 	} else {
-		return;
+		canvas.classList.add('cannotMoveLeft');
+		setTimeout(function(){
+			canvas.classList.remove('cannotMoveLeft');
+		}, 500);
 	}
 
 }
+
+// Accessing a project
+
+var triggersProjectView = document.getElementsByClassName('triggersProjectView');
+
+for (var i = triggersProjectView.length - 1; i >= 0; i--) {
+
+	triggersProjectView[i].addEventListener('click', function(){
+		accessClickedProject();
+	})
+
+}
+
+function accessClickedProject() {
+	body.classList.add('showingProject');
+	welcomeNotice.classList.add('closed');
+}
+
+// Resize functions
+
+document.addEventListener('resize', function(){
+
+});

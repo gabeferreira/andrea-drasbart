@@ -7,56 +7,78 @@ Concept and design by Chuck Carlson and Gabe Ferreira
 <head>
 
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>Andrea Drasbart</title>
+	<title>Andrea Drasbart: Home</title>
 	<meta name="viewport" content="width=device-width">
 	<meta name="description" content="Travel photography and beyond">
 	<link href="assets/main.css" rel="stylesheet" type="text/css" />
 	<link rel="shortcut icon" href="assets/img/favicon.ico">
+	<link rel="canonical" href="http://andreadrasbart.com" />
 
 </head>
 
-<body class="loading">
+<body>
 
-	<div id="welcomeNotice">
-		<span class="inlineLink" id="microphoneTextButton">Turn on the microphone</span> to control this site with your voice.
-		<span class="iconButton" id="welcomeNoticeCloseButton"><img src="assets/img/ui/close.svg"></span><!--iconButton-->
+	<div id="loadingMessage">
+		Loading
+	</div><!--loadingMessage-->
+
+	<div id="welcomeNotice" class="pill">
+
+		<div class="pillContainer">
+
+			<div id="welcomeNoticeText">
+				<span class="inlineLink" id="microphoneTextButton">Turn on the microphone</span> to control this site with your voice.
+			</div><!--welcomeNoticeText-->
+
+			<span class="iconButton" id="welcomeNoticeCloseButton"><img src="assets/img/ui/close.svg"></span><!--iconButton-->
+
+		</div><!--pillContainer-->
+
 	</div><!--welcomeNotice-->
 
-	<div id="controlPanel">
+	<div id="controlPanel" class="pill">
 
-		<div id="siteTitle">
-			Andrea Drasbart
-		</div>
+		<div class="pillContainer">
 
-		<div id="controlPanelInfoButton" class="iconAndLabelButton">
-			<span class="buttonLabel">“Info”</span>
-		</div><!--controlPanelInfoButton-->
-
-		<div class="floatRight">
-			<div class="iconAndLabelButton microphoneOff" id="controlPanelMicrophoneButton">
-				<!--<img src="assets/img/ui/microphone.svg">-->
-				<span id="microphoneCircle"></span>
-				<span class="buttonLabel" id="controlPanelMicrophoneButtonLabel">Microphone is off</span>
+			<div id="siteTitle">
+				Andrea Drasbart
 			</div>
-		</div><!--floatRight-->
+
+			<div id="controlPanelInfoButton" class="iconAndLabelButton">
+				<span class="buttonLabel">“Info”</span>
+			</div><!--controlPanelInfoButton-->
+
+			<div class="floatRight">
+				<div class="iconAndLabelButton microphoneOff" id="controlPanelMicrophoneButton">
+					<!--<img src="assets/img/ui/microphone.svg">-->
+					<span id="microphoneCircle"></span>
+					<span class="buttonLabel" id="controlPanelMicrophoneButtonLabel">Microphone is off</span>
+				</div>
+			</div><!--floatRight-->
+
+		</div><!--pillContainer-->
 
 	</div><!--controlPanel-->
 
-	<div id="selector">
-		<div class="relativeContainer">
-			<div class="selectorElement"></div><!--selectorElement-->
-			<div class="selectorElement"></div><!--selectorElement-->
-			<div class="selectorElement"></div><!--selectorElement-->
-			<div class="selectorElement"></div><!--selectorElement-->
-		</div><!--relativeContainer-->
-	</div><!--selector-->
+	<div id="stage">
+	</div><!--stage-->
 
 	<div id="canvas">
-		<div id="projectContainer">
-		</div><!--projectContainer-->
-	</div><!--canvas-->
+		
+		<div id="projectContainer"></div><!--projectContainer-->
 
-	<div id="projectViewCTA">“View”</div><!--projectGoCTA-->
+		<div id="selector">
+			<div class="relativeContainer">
+				<div class="selectorElement"></div><!--selectorElement-->
+				<div class="selectorElement"></div><!--selectorElement-->
+				<div class="selectorElement"></div><!--selectorElement-->
+				<div class="selectorElement"></div><!--selectorElement-->
+			</div><!--relativeContainer-->
+		</div><!--selector-->
+
+		<div id="projectViewCTA">“View”</div><!--projectGoCTA-->
+
+	</div><!--canvas-->
 
 	<div id="homepageDirectionalLabels">
 		<div id="homepageDirectionalLabelUp" class="homepageDirectionalLabel"><img src="assets/img/ui/ear.svg">“Up”</div><!--up-->
@@ -65,11 +87,17 @@ Concept and design by Chuck Carlson and Gabe Ferreira
 		<div id="homepageDirectionalLabelLeft" class="homepageDirectionalLabel"><img src="assets/img/ui/ear.svg">“Left”</div><!--up-->
 	</div><!--homepageDirectionalLabels-->
 
-	<div id="information">
-		<div id="informationText">
-			No voice data is recorded and nothing leaves the browser. “<a class="inlineLink" href="https://www.instagram.com/andreadrasbart/" target="_blank">Contact</a>” Andrea Drasbart. See the “code” on <a href="https://github.com/gabeferreira/andrea-drasbart" class="inlineLink" target="_blank">Github</a>.
-		</div><!--informationText-->
-		<div class="iconAndLabelButton" id="closeInformation"><span class="buttonLabel">“Close”</span></div>
+	<div id="information" class="pill">
+
+		<div class="pillContainer">
+
+			<div id="informationText">
+				No voice data is recorded and nothing leaves the browser. “<a class="inlineLink" href="https://www.instagram.com/andreadrasbart/" target="_blank">Contact</a>” Andrea Drasbart. See the “code” on <a href="https://github.com/gabeferreira/andrea-drasbart" class="inlineLink" target="_blank">Github</a>.
+			</div><!--informationText-->
+			<div class="iconAndLabelButton" id="closeInformation"><span class="buttonLabel">“Close”</span></div>
+
+		</div><!--pillContainer-->
+
 	</div><!--information-->
 
 	<script async src="assets/app.js"></script>
