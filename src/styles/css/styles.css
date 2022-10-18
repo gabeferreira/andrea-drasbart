@@ -16,38 +16,45 @@ time, mark, audio, video {
   border: 0;
   font-size: 100%;
   font: inherit;
-  vertical-align: baseline; }
+  vertical-align: baseline;
+}
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-  display: block; }
+  display: block;
+}
 
 body {
-  line-height: 1; }
+  line-height: 1;
+}
 
 ol, ul {
-  list-style: none; }
+  list-style: none;
+}
 
 blockquote, q {
-  quotes: none; }
+  quotes: none;
+}
 
 blockquote:before, blockquote:after,
 q:before, q:after {
-  content: '';
-  content: none; }
+  content: "";
+  content: none;
+}
 
 table {
   border-collapse: collapse;
-  border-spacing: 0; }
+  border-spacing: 0;
+}
 
 @font-face {
-  font-family: 'Haas Grot Text Web';
+  font-family: "Haas Grot Text Web";
   src: url("fonts/nhg/NeueHaasGrotText-55Roman-Web.woff2") format("woff2"), url("fonts/nhg/NeueHaasGrotText-55Roman-Web.woff") format("woff");
   font-weight: 400;
   font-style: normal;
-  font-stretch: normal; }
-
+  font-stretch: normal;
+}
 html, body {
   overflow: auto;
   -webkit-font-smoothing: antialiased;
@@ -56,24 +63,29 @@ html, body {
   line-height: 24px;
   background: #0a0a0a;
   overscroll-behavior-x: none;
-  overscroll-behavior-y: none; }
+  overscroll-behavior-y: none;
+}
 
 body {
   position: fixed;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+}
 
 .clearfix {
-  clear: both; }
+  clear: both;
+}
 
 .relativeContainer {
   width: 100%;
   height: 100%;
-  position: relative; }
+  position: relative;
+}
 
 a {
   color: inherit;
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 .pill {
   height: 62px;
@@ -82,7 +94,8 @@ a {
   padding-left: 18px;
   padding-right: 10px;
   padding-bottom: 10px;
-  padding-top: 10px; }
+  padding-top: 10px;
+}
 
 #loadingMessage {
   position: fixed;
@@ -92,7 +105,8 @@ a {
   transform: translateX(-50%) translateY(-50%);
   z-index: 20;
   color: #fff;
-  transition: opacity 0.4s; }
+  transition: opacity 0.4s;
+}
 
 #welcomeNotice {
   display: inline-block;
@@ -101,21 +115,25 @@ a {
   left: 15px;
   background: #FDD663;
   transition: opacity 0.2s;
-  z-index: 10; }
+  z-index: 10;
+}
 
 #welcomeNotice.closed {
   opacity: 0;
-  pointer-events: none; }
+  pointer-events: none;
+}
 
 #welcomeNoticeText {
   display: inline-block;
   vertical-align: top;
-  margin-top: 8px; }
+  margin-top: 8px;
+}
 
 .inlineLink {
   padding-bottom: 1px;
   border-bottom: 1px solid;
-  cursor: pointer; }
+  cursor: pointer;
+}
 
 span.iconButton {
   height: 42px;
@@ -127,14 +145,17 @@ span.iconButton {
   transition: background 0.2s;
   cursor: pointer;
   box-sizing: border-box;
-  display: inline-block; }
+  display: inline-block;
+}
 
 span.iconButton:hover {
-  background: rgba(0, 0, 0, 0.1); }
+  background: rgba(0, 0, 0, 0.1);
+}
 
 span.iconButton img {
   width: 100%;
-  height: 100%; }
+  height: 100%;
+}
 
 #controlPanel {
   position: fixed;
@@ -144,13 +165,16 @@ span.iconButton img {
   color: #fff;
   width: 400px;
   z-index: 30;
-  transition: bottom 0.2s; }
+  transition: bottom 0.2s;
+}
 
 #controlPanelInfoButton {
-  margin-left: 10px; }
+  margin-left: 10px;
+}
 
 .floatRight {
-  float: right; }
+  float: right;
+}
 
 .iconAndLabelButton {
   display: inline-block;
@@ -162,21 +186,25 @@ span.iconButton img {
   padding-left: 10px;
   padding-right: 10px;
   border-radius: 1px;
-  transition: background 0.2s; }
+  transition: background 0.2s;
+}
 
 .iconAndLabelButton:hover {
-  background: rgba(255, 255, 255, 0.1); }
+  background: rgba(255, 255, 255, 0.1);
+}
 
 .iconAndLabelButton img {
   vertical-align: middle;
   width: 20px;
-  height: 20px; }
+  height: 20px;
+}
 
 #siteTitle {
-  display: inline-block; }
+  display: inline-block;
+}
 
 #microphoneCircle {
-  content: '';
+  content: "";
   height: 10px;
   width: 10px;
   background: #646464;
@@ -184,10 +212,12 @@ span.iconButton img {
   display: inline-block;
   vertical-align: middle;
   margin-right: 2px;
-  margin-top: -3px; }
+  margin-top: -3px;
+}
 
 .iconAndLabelButton.microphoneOn #microphoneCircle {
-  background: #34A853; }
+  background: #34A853;
+}
 
 #canvas {
   position: fixed;
@@ -198,59 +228,78 @@ span.iconButton img {
   background: #0a0a0a;
   overflow-x: hidden;
   overflow-y: hidden;
-  transition: transform 0.4s, opacity 0.4s; }
+  transition: transform 0.4s, opacity 0.4s;
+}
 
 #canvas.cannotMoveUp {
-  animation: cannotMoveUp 0.4s; }
+  animation: cannotMoveUp 0.4s;
+}
 
 #canvas.cannotMoveDown {
-  animation: cannotMoveDown 0.4s; }
+  animation: cannotMoveDown 0.4s;
+}
 
 #canvas.cannotMoveLeft {
-  animation: cannotMoveLeft 0.4s; }
+  animation: cannotMoveLeft 0.4s;
+}
 
 #canvas.cannotMoveRight {
-  animation: cannotMoveRight 0.4s; }
+  animation: cannotMoveRight 0.4s;
+}
 
 @keyframes cannotMoveUp {
   0% {
-    transform: translateY(0); }
+    transform: translateY(0);
+  }
   50% {
-    transform: translateY(20px); }
+    transform: translateY(20px);
+  }
   100% {
-    transform: translateY(0); } }
-
+    transform: translateY(0);
+  }
+}
 @keyframes cannotMoveDown {
   0% {
-    transform: translateY(0); }
+    transform: translateY(0);
+  }
   50% {
-    transform: translateY(-20px); }
+    transform: translateY(-20px);
+  }
   100% {
-    transform: translateY(0); } }
-
+    transform: translateY(0);
+  }
+}
 @keyframes cannotMoveLeft {
   0% {
-    transform: translateX(0); }
+    transform: translateX(0);
+  }
   50% {
-    transform: translateX(20px); }
+    transform: translateX(20px);
+  }
   100% {
-    transform: translateX(0); } }
-
+    transform: translateX(0);
+  }
+}
 @keyframes cannotMoveRight {
   0% {
-    transform: translateX(0); }
+    transform: translateX(0);
+  }
   50% {
-    transform: translateX(-20px); }
+    transform: translateX(-20px);
+  }
   100% {
-    transform: translateX(0); } }
-
+    transform: translateX(0);
+  }
+}
 #projectContainer {
   width: 2250px;
   border-left: 1px solid #464646;
-  border-top: 1px solid #464646; }
+  border-top: 1px solid #464646;
+}
 
 #projectContainer.loaded {
-  transition: transform 0.4s, opacity 0.4s; }
+  transition: transform 0.4s, opacity 0.4s;
+}
 
 .project {
   width: 450px;
@@ -263,7 +312,8 @@ span.iconButton img {
   text-align: center;
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+}
 
 .projectThumbnailLink {
   width: calc(100% - 80px);
@@ -272,16 +322,19 @@ span.iconButton img {
   transition: opacity 0.4s;
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+}
 
 .projectThumbnailLink:hover {
-  cursor: pointer; }
+  cursor: pointer;
+}
 
 .projectThumbnail {
   height: auto;
   width: auto;
   max-height: 100%;
-  max-width: 100%; }
+  max-width: 100%;
+}
 
 .projectTitle {
   transition: opacity 0.4s;
@@ -289,12 +342,14 @@ span.iconButton img {
   position: absolute;
   top: 15px;
   text-align: center;
-  color: #fff; }
+  color: #fff;
+}
 
 .projectTitle:hover {
   padding-bottom: 1px;
   cursor: pointer;
-  border-bottom: 1px solid; }
+  border-bottom: 1px solid;
+}
 
 #selector {
   position: fixed;
@@ -305,30 +360,36 @@ span.iconButton img {
   left: 50%;
   top: 50%;
   transform: translateX(-50%) translateY(-50%);
-  pointer-events: none; }
+  pointer-events: none;
+}
 
 .selectorElement {
   position: absolute;
   width: 8px;
   height: 8px;
   border-radius: 4px;
-  background: #fff; }
+  background: #fff;
+}
 
 .selectorElement:nth-child(1) {
   top: -4px;
-  left: -4px; }
+  left: -4px;
+}
 
 .selectorElement:nth-child(2) {
   top: -4px;
-  right: -4px; }
+  right: -4px;
+}
 
 .selectorElement:nth-child(3) {
   bottom: -4px;
-  left: -4px; }
+  left: -4px;
+}
 
 .selectorElement:nth-child(4) {
   bottom: -4px;
-  right: -4px; }
+  right: -4px;
+}
 
 .homepageDirectionalLabel {
   background: #ED2935;
@@ -342,7 +403,8 @@ span.iconButton img {
   width: 60px;
   text-align: center;
   cursor: pointer;
-  transition: opacity 0.4s, transform 0.4s; }
+  transition: opacity 0.4s, transform 0.4s;
+}
 
 .homepageDirectionalLabel img {
   filter: invert(1);
@@ -351,27 +413,32 @@ span.iconButton img {
   vertical-align: middle;
   margin-top: -2px;
   margin-right: 4px;
-  display: none; }
+  display: none;
+}
 
 #homepageDirectionalLabelUp {
   left: 50%;
   transform: translateX(-50%);
-  top: 15px; }
+  top: 15px;
+}
 
 #homepageDirectionalLabelDown {
   left: 50%;
   transform: translateX(-50%);
-  bottom: 15px; }
+  bottom: 15px;
+}
 
 #homepageDirectionalLabelLeft {
   top: 50%;
   transform: translateY(-50%);
-  left: 15px; }
+  left: 15px;
+}
 
 #homepageDirectionalLabelRight {
   top: 50%;
   transform: translateY(-50%);
-  right: 15px; }
+  right: 15px;
+}
 
 #projectViewCTA {
   position: fixed;
@@ -385,36 +452,39 @@ span.iconButton img {
   top: calc(50% - 32px);
   opacity: 0;
   transition: opacity 0.4s;
-  transition-delay: 1s; }
+  transition-delay: 1s;
+}
 
 body.loaded #projectViewCTA {
-  opacity: 1; }
-
+  opacity: 1;
+}
 body.loaded .projectTitle {
-  opacity: 1; }
-
+  opacity: 1;
+}
 body.loaded .projectThumbnailLink {
-  opacity: 1; }
-
+  opacity: 1;
+}
 body.loaded #loadingMessage {
   opacity: 0;
-  pointer-events: none; }
+  pointer-events: none;
+}
 
 body.showingProject #canvas {
   opacity: 0;
-  transform: scale(1.25); }
-
+  transform: scale(1.25);
+}
 body.showingProject #homepageDirectionalLabelUp {
-  transform: translateX(-50%) translateY(-60px); }
-
+  transform: translateX(-50%) translateY(-60px);
+}
 body.showingProject #homepageDirectionalLabelDown {
-  transform: translateX(-50%) translateY(60px); }
-
+  transform: translateX(-50%) translateY(60px);
+}
 body.showingProject #homepageDirectionalLabelLeft {
-  transform: translateX(-100px) translateY(-50%); }
-
+  transform: translateX(-100px) translateY(-50%);
+}
 body.showingProject #homepageDirectionalLabelRight {
-  transform: translateX(100px) translateY(-50%); }
+  transform: translateX(100px) translateY(-50%);
+}
 
 #information {
   position: fixed;
@@ -422,16 +492,20 @@ body.showingProject #homepageDirectionalLabelRight {
   bottom: -65px;
   background: #7AA8F5;
   transition: bottom 0.2s;
-  z-index: 10; }
+  z-index: 10;
+}
 
 #informationText {
-  display: inline; }
+  display: inline;
+}
 
 #closeInformation {
-  margin-left: 20px; }
+  margin-left: 20px;
+}
 
 body.showingInfo #controlPanel {
-  bottom: 94px; }
-
+  bottom: 94px;
+}
 body.showingInfo #information {
-  bottom: 15px; }
+  bottom: 15px;
+}

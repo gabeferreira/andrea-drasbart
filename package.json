@@ -11,10 +11,11 @@
     "gulp-connect": "^5.7.0",
     "gulp-eslint": "latest",
     "gulp-plumber": "latest",
-    "gulp-sass": "^4.0.2",
-    "gulp-uglify": "^3.0.2"
+    "gulp-sass": "^5.1.0",
+    "gulp-uglify": "^3.0.2",
+    "sass": "^1.48.0"
   },
-  "name": "portfolio2019",
+  "name": "andrea-drasbart",
   "description": "",
   "version": "1.0.0",
   "main": "gulpfile.js",

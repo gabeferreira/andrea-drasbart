@@ -2,7 +2,7 @@
 
 // Require all plugins
 var gulp = require('gulp'),
-	sass = require('gulp-sass'),
+	sass = require('gulp-sass')(require('sass')),
 	connect = require('gulp-connect'),
 	uglify = require('gulp-uglify'),
 	babel = require('gulp-babel'),
